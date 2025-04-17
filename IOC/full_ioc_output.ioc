@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="2813a09f-5d0a-4014-a80a-6e1390733e89" last-modified="2025-04-17T04:25:20">
+  <short_description>RH</short_description>
+  <description>RH | Severity: High | Family: Qilin</description>
+  <keywords/>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-04-17T04:25:20</authored_date>
+  <links/>
+  <definition>
+    <Indicator operator="OR" id="7bba13d4-12fd-41a6-af9e-1e64cc48ce2f">
+      <IndicatorItem id="968cea53-76ff-4f82-b5f7-b22233bbe509" condition="is">
+        <Context document="EmailMessage" search="EmailMessage/From" type="mir"/>
+        <Content type="string">nopaperplanes@proton.me</Content>
+      </IndicatorItem>
+      <IndicatorItem id="918b8c81-e95f-49a2-973d-4ee79598b347" condition="is">
+        <Context document="ProcessItem" search="ProcessItem/ImagePath" type="mir"/>
+        <Content type="string">misctoolsupdate.com/fr</Content>
+      </IndicatorItem>
+      <IndicatorItem id="193cc699-6811-4f1e-bf34-8b2ee77485be" condition="is">
+        <Context document="Network" search="DNSQuery.Question.Name" type="mir"/>
+        <Content type="string">misctoolsupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b96a9510-c88c-417d-b244-58b8243326e4" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">DECBAA664BFBD71B22A31753AFEBDD1A</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b9c01ace-9c08-4ffc-a1aa-d330aca988f4" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">1E7475CF5A5AF66A79A4F3F17F875617</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>
