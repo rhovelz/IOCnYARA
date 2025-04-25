@@ -1,6 +1,5 @@
 # AUTHOR: RADIVAN - RHOVELZ
 
-
 import uuid
 import datetime
 import re
@@ -31,12 +30,11 @@ def detect_type(value):
     if re.fullmatch(r"[a-fA-F0-9]{64}", value): return "SHA256"
     if re.fullmatch(r"\d{1,3}(\.\d{1,3}){3}", value): return "IP"
     if re.fullmatch(r"([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}", value): return "DOMAIN"
-    if re.fullmatch(r"[^@]+@[^@]+\.[^@]+", value): return "EMAIL"
     if "\\" in value or "/" in value:
         if value.lower().endswith((".exe", ".dll", ".bat", ".sh")):
             return "FILENAME"
         return "BINARY"
-    return None
+    return None  # Removed EMAIL support for KATA
 
 def create_indicator_item(doc, search_path, value, value_type="string", condition="is"):
     item = Element("IndicatorItem", {"id": gen_uuid(), "condition": condition})
@@ -47,33 +45,6 @@ def create_indicator_item(doc, search_path, value, value_type="string", conditio
     })
     SubElement(item, "Content", {"type": value_type}).text = value.strip()
     return item
-
-#def build_indicator(val, type_detected):
-#    if type_detected == "MD5":
-#        return create_indicator_item("FileItem", "FileItem/Md5sum", val, "md5")
-#    elif type_detected == "SHA1":
-#        return create_indicator_item("FileItem", "FileItem/Sha1sum", val)
-#    elif type_detected == "SHA256":
-#        return create_indicator_item("FileItem", "FileItem/Sha256sum", val)
-#    elif type_detected == "IP":
-#        return create_indicator_item("ArpEntryItem", "ArpEntryItem/IPv4Address", val, "IP")
-#    elif type_detected == "DOMAIN":
-#        return create_indicator_item("Network", "DNSQuery.Question.Name", val)
-#    elif type_detected == "FILENAME":
-#        return create_indicator_item("FileItem", "FileItem/FileName", val)
-#    elif type_detected == "BINARY":
-#        return create_indicator_item("ProcessItem", "ProcessItem/ImagePath", val)
-#    elif type_detected == "MUTEX":
-#        return create_indicator_item("MutexItem", "MutexItem/Mutex", val.split("mutex:")[1])
-#    elif type_detected == "REGISTRY":
-#        return create_indicator_item("RegistryItem", "RegistryItem/Path", val.split("reg:")[1])
-#    elif type_detected == "FILESIZE":
-#        size_val = val.split("filesize:")[1]
-#        return create_indicator_item("FileItem", "FileItem/SizeInBytes", size_val, value_type="int")
-#    elif type_detected == "SNI":
-#        return create_indicator_item("Network", "HTTPSession/SNI", val.split("sni:")[1])
-#    elif type_detected == "EMAIL":
-#        return create_indicator_item("EmailMessage", "EmailMessage/From", val)
 
 def build_indicator(val, type_detected):
     if type_detected == "MD5":
@@ -99,9 +70,7 @@ def build_indicator(val, type_detected):
         return create_indicator_item("FileItem", "FileItem/SizeInBytes", size_val, value_type="int")
     elif type_detected == "SNI":
         return create_indicator_item("Network", "Network/SNI", val.split("sni:")[1], "string")
-    elif type_detected == "EMAIL":
-        return create_indicator_item("EmailMessage", "EmailMessage/From", val, "string")
-
+    return None  # EMAIL not supported by KATA
 
 def create_ioc(indicators, author, short_desc, desc, severity="Medium", malware_family=""):
     root = Element("ioc", {
@@ -144,12 +113,14 @@ def load_indicators_from_file(filepath):
             if not type_detected:
                 print(f"⚠️  Skipped unrecognized: {val}")
                 continue
-            indicators.append(build_indicator(val, type_detected))
+            indicator = build_indicator(val, type_detected)
+            if indicator:
+                indicators.append(indicator)
     return indicators
 
 def main():
-    print("🔐 FULL IOC BUILDER (hashes, IPs, domains, emails, mutex, registry, etc)")
-    print("-------------------------------------------------------------------------")
+    print("🔐 FULL IOC BUILDER (KATA-Compatible)")
+    print("--------------------------------------------------")
 
     author = input("👤 Author: ")
     short_desc = input("📝 Short Description: ")
@@ -171,9 +142,11 @@ def main():
             break
         type_detected = detect_type(val)
         if not type_detected:
-            print("⚠️  Could not detect type. Skipped.")
+            print("⚠️  Type not supported or unrecognized. Skipped.")
             continue
-        indicators.append(build_indicator(val, type_detected))
+        indicator = build_indicator(val, type_detected)
+        if indicator:
+            indicators.append(indicator)
 
     if not indicators:
         print("❌ No valid indicators entered.")
@@ -188,4 +161,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

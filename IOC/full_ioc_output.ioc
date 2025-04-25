@@ -1,32 +1,100 @@
 <?xml version="1.0" ?>
-<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="2813a09f-5d0a-4014-a80a-6e1390733e89" last-modified="2025-04-17T04:25:20">
-  <short_description>RH</short_description>
-  <description>RH | Severity: High | Family: Qilin</description>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="ae939780-6cfa-47ed-8e67-d57a89af6818" last-modified="2025-04-25T04:33:45">
+  <short_description>Qilin</short_description>
+  <description>Qilin Ransomware | Severity: High | Family: Qilin</description>
   <keywords/>
   <authored_by>Radivan</authored_by>
-  <authored_date>2025-04-17T04:25:20</authored_date>
+  <authored_date>2025-04-25T04:33:45</authored_date>
   <links/>
   <definition>
-    <Indicator operator="OR" id="7bba13d4-12fd-41a6-af9e-1e64cc48ce2f">
-      <IndicatorItem id="968cea53-76ff-4f82-b5f7-b22233bbe509" condition="is">
-        <Context document="EmailMessage" search="EmailMessage/From" type="mir"/>
-        <Content type="string">nopaperplanes@proton.me</Content>
+    <Indicator operator="OR" id="5e171c55-5510-4b57-982f-c374dc5398e3">
+      <IndicatorItem id="a1fbeee9-aef9-49e8-b674-0ea8fe91a871" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://misctoolsupdate.com/fr</Content>
       </IndicatorItem>
-      <IndicatorItem id="918b8c81-e95f-49a2-973d-4ee79598b347" condition="is">
-        <Context document="ProcessItem" search="ProcessItem/ImagePath" type="mir"/>
-        <Content type="string">misctoolsupdate.com/fr</Content>
+      <IndicatorItem id="6d3e387e-7d98-4e93-ad15-e40bfffc1ff2" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://login.misctoolsupdate.com/fr</Content>
       </IndicatorItem>
-      <IndicatorItem id="193cc699-6811-4f1e-bf34-8b2ee77485be" condition="is">
-        <Context document="Network" search="DNSQuery.Question.Name" type="mir"/>
-        <Content type="string">misctoolsupdate.com</Content>
+      <IndicatorItem id="fdfb1093-3d82-4b72-bd4a-349cc3858270" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://login.misctoolsupdate.com/ch</Content>
       </IndicatorItem>
-      <IndicatorItem id="b96a9510-c88c-417d-b244-58b8243326e4" condition="is">
+      <IndicatorItem id="20096540-7a25-42db-a643-c743081943da" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://misctoolsupdate.com/mt</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5dc0d2bd-8275-40bc-b13a-b6d87136fcb6" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://sso.misctoolsupdate.com/ch</Content>
+      </IndicatorItem>
+      <IndicatorItem id="206e01a7-5d39-4fd4-9b2b-82c019721d51" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://sso.misctoolsupdate.com/be</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8f27f31d-585b-4495-aaa8-578ed42a286e" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://misctoolsupdate.com/be</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6df4af48-818e-4b95-be7b-b1391db718cd" condition="is">
         <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
-        <Content type="md5">DECBAA664BFBD71B22A31753AFEBDD1A</Content>
+        <Content type="md5">B377FF706FB36006CDB1B6B71E62B7E4</Content>
       </IndicatorItem>
-      <IndicatorItem id="b9c01ace-9c08-4ffc-a1aa-d330aca988f4" condition="is">
+      <IndicatorItem id="0a0b027c-84cc-4e2a-9841-8be64dace0c8" condition="is">
         <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
-        <Content type="md5">1E7475CF5A5AF66A79A4F3F17F875617</Content>
+        <Content type="md5">D2E1D5CE8B85D5E5F42106B28C3F6E1E</Content>
+      </IndicatorItem>
+      <IndicatorItem id="943f7ea1-fbbf-42d8-8ce2-3e7842633eaf" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">F51B82D0BA1B46CF56C9BCC82127FB45</Content>
+      </IndicatorItem>
+      <IndicatorItem id="05a37dfa-a974-4264-980e-578ee2bbebda" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">28B19B7E689C339912793FCA5627541E</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d03247b8-0d2d-41d9-8270-01ac4e109120" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">01F892412F9AD5027D6E8A19ECF530FE</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4784fae8-4734-4a74-b6c7-562ae2979952" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">BE0529FAA555736DBF72D88CB50CB318</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d5747571-2521-458c-bef2-506458c714b7" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">52E666A32D0847B416B66AD9AA98BBED</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4d1660ed-f95a-4ec2-9a4d-f5ce06b38479" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">D63063C53168E4EA8235EEE65EDEA4E6</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6ef6a818-f4aa-417d-b1e5-c879e7bdde46" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">D2E1D5CE8B85D5E5F42106B28C3F6E1E</Content>
+      </IndicatorItem>
+      <IndicatorItem id="aa47db61-0333-4365-9b01-09b457e96b64" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">A3CBB5F2990496C85B4F6ABAB004A371</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a5e61b6c-5f8a-488b-abfd-8975f9b56a8b" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">\x.x.x.x\ADMIN$\431f9cc.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1343868c-4526-4424-8eca-7d1f7dbd6851" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">\x.x.x.x\ADMIN$\9517238.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="93887f1b-0eca-413b-a3af-da9f64e8c75f" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">File: \x.x.x.x\ADMIN$\431f9cc.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4313d6f0-5d95-4fd9-9bd7-263768807b07" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">File: \x.x.x.x\ADMIN$\522cd6a.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f098dd51-af1c-455b-b4da-a67314ca9d10" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">File: \x.x.x.x\ADMIN$\249f5cb.exe</Content>
       </IndicatorItem>
     </Indicator>
   </definition>
