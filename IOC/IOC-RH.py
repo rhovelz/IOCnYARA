@@ -149,7 +149,7 @@ def load_indicators_from_file(filepath):
 
 def main():
     print("-------------------------------------------------------------------------")
-    print("                         👑 OWNED BY rh0v3lz                             ")
+    print("                         👑 OWNED BY rh0v3lz 👑                          ")
     print("-------------------------------------------------------------------------")
     print("🔐 FULL IOC BUILDER (hashes, IPs, domains, emails, mutex, registry, etc)")
     print("-------------------------------------------------------------------------")
