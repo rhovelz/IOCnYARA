@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="97f0e9e1-7006-4326-a796-5184635a69ab" last-modified="2025-05-02T07:33:11">
+  <short_description>Qilin</short_description>
+  <description>Qilin Ransomware | Severity: High | Family: Qilin</description>
+  <keywords/>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-05-02T07:33:11</authored_date>
+  <links/>
+  <definition>
+    <Indicator operator="OR" id="4c37e543-5cfa-4b5a-b3d0-6733fb349eeb">
+      <IndicatorItem id="ec1ba667-cc33-4528-8b2c-a80cb6b4a413" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">b377ff706fb36006cdb1b6b71e62b7e4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="98bcb3b4-a8a2-4961-9be4-f6d7dfd49965" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+        <Content type="sha256">0642a730c3405b9476480237d2746608ab46831e8a062d56d2e69c7b096b6cb6</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8841cbfa-dfc9-4698-abd4-95a77d93da6c" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">180.131.145.73</Content>
+      </IndicatorItem>
+      <IndicatorItem id="13d405d8-ba6a-4558-bcd4-2590da5aabf5" condition="is">
+        <Context document="Network" search="Network/DNS" type="mir"/>
+        <Content type="string">misctoolsupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="48753521-b482-48fd-8b32-ee98e0955fef" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">71d6e59ee15e5b30d7ff1b561e683f45</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a95e9492-8e64-4499-a8be-210b39d70af7" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">C:\Windows\system32\runonce.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d753276e-aa40-4103-ae0f-2b9cc63e17f7" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://github.com/SpecterOps/SharpHound</Content>
+      </IndicatorItem>
+      <IndicatorItem id="02c1adc8-54e1-45d4-80e2-752a1a1e0eb4" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">01F892412F9AD5027D6E8A19ECF530FE</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a3b20c7a-86c2-414a-8c46-3605673b5489" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">52e666a32d0847b416b66ad9aa98bbed</Content>
+      </IndicatorItem>
+      <IndicatorItem id="609c1ea7-220a-4649-bd0a-b4be66eb4f43" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+        <Content type="sha1">1ff859b362cb18d9ab8bd5a595f56bc1e3f64df4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c70441ab-c408-4045-8af1-81df05c4b12f" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+        <Content type="sha256">b47558166bfe888360c8a99b633172e2c2b1859fc5ba162f51da145f7272fc57</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cb5f9f8f-5b84-4050-a3f6-110e5e87ee8e" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">1bf171b1f388691c3985df6fb6c3f0d1</Content>
+      </IndicatorItem>
+      <IndicatorItem id="adb827a1-f4d2-4735-8f0a-64c94125b845" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://www.advanced-ip-scanner.com/</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4f6c1092-89c3-4cc6-8e39-44dd55d826d3" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+        <Content type="sha1">1556232c5b6a998a4765a8f53d48a059cd617c59</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

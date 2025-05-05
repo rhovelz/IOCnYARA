@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="6952a49f-7562-4ef5-958d-64d195dbaf28" last-modified="2025-04-25T10:33:20">
+  <short_description>Qilin</short_description>
+  <description>Qilin Ransomware 25 April 2025 | Severity: High | Family: Qilin</description>
+  <keywords/>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-04-25T10:33:20</authored_date>
+  <links/>
+  <definition>
+    <Indicator operator="OR" id="1b848acc-b491-4035-8146-4a5dcf3566b3">
+      <IndicatorItem id="48afdfc0-026f-4d1c-95ad-bf5931618139" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">52e666a32d0847b416b66ad9aa98bbed</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e4124aaa-5d59-431f-9572-6fea63c41954" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+        <Content type="sha1">1556232c5b6a998a4765a8f53d48a059cd617c59</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1e0fceae-67c0-4f51-8041-69618cd6d36f" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">d2ab39ea2c0fcd172751f84bda723a97</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6d75c6b4-2f9f-434c-a645-e05b80cf4deb" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+        <Content type="sha1">dce2af90e45fb9fc05ecbc9beddee53fb66f3c6d</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3319b0db-593b-4714-ab45-86a8efb35e80" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+        <Content type="sha256">c4e078607db2784be7761c86048dffa6f3ef04b551354a32fcdec3b6a3450905</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b4eb1669-107f-4965-b4a4-60ed8c611ced" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">1bf171b1f388691c3985df6fb6c3f0d1</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f730e69c-db88-4b17-bdad-d4c2f26537dd" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://bt6.api.mega.co.nz</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a5a526a0-a2b2-4f91-b579-3cf73a0ea821" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">66.203.125.53</Content>
+      </IndicatorItem>
+      <IndicatorItem id="167b911d-cc31-448a-b706-cbf52499f26b" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://89-44-168-229.ip.dclux.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5e660e05-c41e-4c89-b5f7-3a963b8c7e47" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">52e666a32d0847b416b66ad9aa98bbed</Content>
+      </IndicatorItem>
+      <IndicatorItem id="de86cf51-667a-4867-b982-915ef5a144d7" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">01F892412F9AD5027D6E8A19ECF530FE</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1a5c2c2e-9000-41a4-9037-f2e98d5056f7" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+        <Content type="string">C:\Windows\system32\runonce.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="69eb3556-4f71-49ed-aa04-8efaf9af6975" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">71d6e59ee15e5b30d7ff1b561e683f45</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5c0dc4a9-4025-4573-8a58-82aeb22e7784" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+        <Content type="sha256">f1c45cbbd98619e197154085a05fd972283af6788343aa04492e35798a06e2b7</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8926ba8b-ac01-4430-abac-1e5e0c47a2b3" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+        <Content type="md5">b377ff706fb36006cdb1b6b71e62b7e4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5e455066-8c15-4788-9cab-7eedb43e9519" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">https://misctoolsupdate.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8bea0a15-1af7-464b-b260-b2eaea8f7af5" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">180.131.145.73</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>
