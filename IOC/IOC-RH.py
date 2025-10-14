@@ -12,7 +12,7 @@ def gen_uuid():
     return str(uuid.uuid4())
 
 def current_utc():
-    return datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S")
+    return datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%S")
 
 def detect_type(value):
     value = value.strip()

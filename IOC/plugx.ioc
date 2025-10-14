@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="7852d09d-9002-4f1e-b2dd-d0d43022a29c" last-modified="2025-10-14T04:14:20">
+  <short_description>Plugx</short_description>
+  <description>Plugx | Severity: High | Family: -</description>
+  <keywords/>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-10-14T04:14:20</authored_date>
+  <links/>
+  <definition>
+    <Indicator operator="OR" id="819a720f-e3e9-453d-9cab-546959a87128">
+      <IndicatorItem id="61cb1c49-fab9-435f-8e09-859e3ce8258b" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">103.136.45.108</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f15becdd-dd4a-4881-a89f-d47e6283bbe2" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">103.172.10.165</Content>
+      </IndicatorItem>
+      <IndicatorItem id="bcd7c4a5-9745-4091-a171-b17974385a88" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">103.9.14.218</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e36ee87b-bfb5-405e-8b0f-581be1eed7d7" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">117.239.199.202</Content>
+      </IndicatorItem>
+      <IndicatorItem id="db626404-99a6-43ea-9d63-f6a21f7159cd" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">117.254.105.200</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6af79f1c-84dd-4b36-b2dc-5958cab54f3f" condition="is">
+        <Context document="Network" search="Network/RemoteIP" type="mir"/>
+        <Content type="string">45.114.192.137</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>
