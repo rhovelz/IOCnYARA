@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="6c39b177-d57b-44a3-8034-269c1e13b3ba" last-modified="2025-10-11T15:05:29Z" version="1.1" xsi:schemaLocation="http://schemas.mandiant.com/2010/ioc ioc.xsd">
+  <short_description>PLugx</short_description>
+  <description>Plugx | Severity: High | Family: -</description>
+  <keywords>
+    <Keyword>- High</Keyword>
+  </keywords>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-10-11T15:05:29Z</authored_date>
+  <links>
+    <Link href="https://otx.alienvault.com/">OTX Reference</Link>
+  </links>
+  <definition>
+    <Indicator operator="OR" id="392349f4-6520-4ec7-9000-789865f0668e">
+      <IndicatorItem id="899b38d7-4026-469c-9369-eb9e051d6576" condition="is">
+        <Context search="Network/DestinationAddress/IPv4-addr" type="sigs" doc_namespace="http://schemas.mandiant.com/2010/ioc" doc_name="Network"/>
+        <Content type="string">103.136.45.108</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ea3f5ef6-1222-45f0-b074-7bccafdf8c29" condition="is">
+        <Context search="Network/DestinationAddress/IPv4-addr" type="sigs" doc_namespace="http://schemas.mandiant.com/2010/ioc" doc_name="Network"/>
+        <Content type="string">103.172.10.165</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d587c9ee-520b-4689-b4db-43c09bd89630" condition="is">
+        <Context search="Network/DestinationAddress/IPv4-addr" type="sigs" doc_namespace="http://schemas.mandiant.com/2010/ioc" doc_name="Network"/>
+        <Content type="string">103.9.14.218</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4f7dc32a-b116-40db-b2d8-c83d366210ee" condition="is">
+        <Context search="Network/DestinationAddress/IPv4-addr" type="sigs" doc_namespace="http://schemas.mandiant.com/2010/ioc" doc_name="Network"/>
+        <Content type="string">117.239.199.202</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a3c0f4f7-9b99-4e58-ae68-ac81b522706c" condition="is">
+        <Context search="Network/DestinationAddress/IPv4-addr" type="sigs" doc_namespace="http://schemas.mandiant.com/2010/ioc" doc_name="Network"/>
+        <Content type="string">117.254.105.200</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2ce2a349-411a-474d-91ff-17c87954fb0a" condition="is">
+        <Context search="Network/DestinationAddress/IPv4-addr" type="sigs" doc_namespace="http://schemas.mandiant.com/2010/ioc" doc_name="Network"/>
+        <Content type="string">45.114.192.137</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

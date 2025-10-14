@@ -1,0 +1,31 @@
+{
+  "type": "bundle",
+  "id": "bundle--cad80ec0-7b62-4151-97b0-a2f40f82983f",
+  "objects": [
+    {
+      "type": "indicator",
+      "id": "indicator--1911233d-a565-41c8-93ad-ee977c33c14a",
+      "created": "2025-10-11T15:05:29Z",
+      "modified": "2025-10-11T15:05:29Z",
+      "name": "PLugx",
+      "description": "Plugx",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[file:hashes.'103.136.45.108']",
+      "pattern_type": "stix",
+      "valid_from": "2025-10-11T15:05:29Z",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "labels": [
+        "-",
+        "high"
+      ],
+      "created_by_ref": "identity--5579898b-46d7-4981-992f-0eb89871437d"
+    }
+  ]
+}
