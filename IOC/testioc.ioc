@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="008d9e5f-0ffd-4abf-8b63-0ad43ca1b005" last-modified="2025-12-17T05:45:03">
+  <short_description/>
+  <description> | Severity: High | Family: -</description>
+  <keywords/>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-12-17T05:45:03</authored_date>
+  <links/>
+  <definition>
+    <Indicator operator="OR" id="c17bd1d6-2b29-42d8-8054-b7378432ea04">
+      <IndicatorItem id="55c0af8c-2313-4f57-8b4c-4a7f224cb0b9" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.1.23</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d79f8909-624b-444a-844c-ba1c3d8626da" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.107.103</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d0948727-2945-4140-8036-fbbb65b3810c" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twswzz.xin</Content>
+      </IndicatorItem>
+      <IndicatorItem id="69b4c493-2871-4dd0-ad48-c3611bdd690a" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twmm.shop</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

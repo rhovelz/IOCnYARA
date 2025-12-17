@@ -83,9 +83,9 @@ def build_indicator(val, type_detected):
     elif type_detected == "SHA256":
         return create_indicator_item("FileItem", "FileItem/Sha256sum", val, "sha256")
     elif type_detected == "IP":
-        return create_indicator_item("Network", "Network/RemoteIP", val, "string")
+        return create_indicator_item("ArpEntryItem", "ArpEntryItem/IPv4Address", val, "IP")
     elif type_detected == "DOMAIN":
-        return create_indicator_item("Network", "Network/DNS", val, "string")
+        return create_indicator_item("DnsEntryItem", "DnsEntryItem/Host", val, "string")
     elif type_detected == "FILENAME":
         return create_indicator_item("FileItem", "FileItem/FileName", val, "string")
     elif type_detected == "BINARY":

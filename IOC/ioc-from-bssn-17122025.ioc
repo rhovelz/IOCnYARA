@@ -1,0 +1,157 @@
+<?xml version="1.0" ?>
+<ioc xmlns="http://schemas.mandiant.com/2010/ioc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="d9db934f-dceb-4daf-a1b0-629c68b000fd" last-modified="2025-12-17T05:47:49">
+  <short_description>IOC</short_description>
+  <description>IOC FROM BSSN  | Severity: High | Family: -</description>
+  <keywords/>
+  <authored_by>Radivan</authored_by>
+  <authored_date>2025-12-17T05:47:49</authored_date>
+  <links/>
+  <definition>
+    <Indicator operator="OR" id="4b65bfa9-616d-4675-ae9f-d7665c8d8e30">
+      <IndicatorItem id="968da7c4-8a8a-4174-ab0a-7e18376b84c3" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.88.44</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a80da061-0fab-47a3-9ce3-1d79fabee71a" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.17.167</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e02bb817-13df-428e-aae1-d9b6d5334d5e" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.50.212</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7a81f78d-64bb-4176-a128-684f14625256" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.16.25</Content>
+      </IndicatorItem>
+      <IndicatorItem id="42d38cef-4b78-4676-9214-1215ffb09291" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.1.105</Content>
+      </IndicatorItem>
+      <IndicatorItem id="82bada21-cccc-4955-af43-876c411b4fbb" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.17.174</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fdc498b7-63cb-4e51-a628-8b271847a867" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.119.194</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f9bb9fb5-67cc-4917-a523-dbc057bb19bc" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.107.195</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e1f1504d-6d02-46bd-9437-57b3a416d6f4" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">103.127.219.148</Content>
+      </IndicatorItem>
+      <IndicatorItem id="07f389c5-e00c-48e8-8519-954f9871ce29" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.16.254</Content>
+      </IndicatorItem>
+      <IndicatorItem id="59e07329-7ebc-44aa-b86c-9a9ed0e209d9" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.1.23</Content>
+      </IndicatorItem>
+      <IndicatorItem id="95df6726-ef29-4e9f-92df-d1be45f8be97" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.60.199.26</Content>
+      </IndicatorItem>
+      <IndicatorItem id="de4f94b4-40a8-41b5-859c-c1e1fae130cd" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.107.103</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0436267f-c817-494e-ad97-e909fe537f14" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">154.205.139.195</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5dfcd349-c45d-4584-8e94-f1ce4c48bef1" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">154.205.139.223</Content>
+      </IndicatorItem>
+      <IndicatorItem id="13882046-c85b-4563-8dcf-08de54684055" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">38.54.17.132</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5a3ae9d6-d7b0-4b58-b224-3d2c54399de9" condition="is">
+        <Context document="ArpEntryItem" search="ArpEntryItem/IPv4Address" type="mir"/>
+        <Content type="IP">91.195.240.123</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5f6894c8-9e3a-454b-8b6d-ce845d767892" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">bulinouui.sbs</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a15fc97b-9040-49ef-a2fa-58ff71a3752d" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">zxp0010w.vip</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3f985021-adbe-4fc0-80a2-cc13b5d15c4b" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twsw.cc</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c2112ef1-88c8-4949-be25-72b11e437d60" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">xinwenwamg.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="aee6f9ad-b8a5-41b0-a1f1-be529b09a801" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">z2tw.vip</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e0c266a8-77b1-492b-a733-0df49b7c00f2" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">cq1tw.icu</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0e76ef25-7f85-4572-8372-5625a72aae12" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">cq1tw.top</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f468103a-3139-4e5c-984e-d171516a3332" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">qiqi1.xin</Content>
+      </IndicatorItem>
+      <IndicatorItem id="16276fe9-be55-4bc9-91ec-8b09db7dca82" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twswzz.xin</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d94d516e-b771-49ed-b154-aeb2d6a7f2bf" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twmm.shop</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cd278cf0-35d9-4f54-a7c8-94a0403f3cc4" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twswzz.icu</Content>
+      </IndicatorItem>
+      <IndicatorItem id="31b97d40-4cac-443e-b753-8d89034f4074" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">z2tw.xin</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7b98d4e0-aba2-47b0-a90b-a66fbfbaa58a" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">zcqiyess.vip</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2420fe76-c335-4746-a2ee-c961d8280e06" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">vip.gaelh.cn</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b6b73ede-7e1e-484f-8a47-2bad96cdab50" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">gjqygs.cn</Content>
+      </IndicatorItem>
+      <IndicatorItem id="275576f6-9f4c-4cef-a563-69bf731c6326" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">jpjpz1.cc</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4b7872d8-c8d6-43da-a5a4-ff6caa6774a7" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">jpjpz1.vip</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8409c595-38ce-42f1-9e2e-b90d0239ce52" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">jpjpz1.top</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c05bf0ad-7382-4c0b-b6ba-c516796d955e" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir"/>
+        <Content type="string">twsww.xin</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>
