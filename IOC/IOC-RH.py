@@ -1,4 +1,4 @@
-# AUTHOR: RADIVAN - RHOVELZ
+# AUTHOR: RADIVAN - XV4NZ7
 
 
 import uuid
@@ -149,7 +149,7 @@ def load_indicators_from_file(filepath):
 
 def main():
     print("-------------------------------------------------------------------------")
-    print("                         👑 OWNED BY rh0v3lz 👑                          ")
+    print("                         👑 OWNED BY XV4NZ7 👑                           ")
     print("-------------------------------------------------------------------------")
     print("🔐 FULL IOC BUILDER (hashes, IPs, domains, emails, mutex, registry, etc)")
     print("-------------------------------------------------------------------------")
